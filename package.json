@@ -1,0 +1,25 @@
+{
+  "name": "unix-listen",
+  "version": "0.1.0",
+  "description": "Simple but comprehensive unix socket listening.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/yanatan16/node-unix-listen"
+  },
+  "keywords": [
+    "unix-socket",
+    "express",
+    "connect",
+    "listen"
+  ],
+  "author": "Jon Eisen <jon@joneisen.me>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yanatan16/node-unix-listen/issues"
+  },
+  "homepage": "https://github.com/yanatan16/node-unix-listen"
+}
