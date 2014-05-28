@@ -1,8 +1,8 @@
 var fs = require('fs')
   , net = require('net')
 
-module.exports = function connectToUnixSocket(app, path, mode_optional, callback) {
-  if (!callback) callback = mode_optional, mode_optional = null;
+module.exports = function connectToUnixSocket(app, path, options, callback) {
+  if (!callback) callback = options, options = null;
 
   var server = app.listen(path)
 
@@ -31,10 +31,10 @@ module.exports = function connectToUnixSocket(app, path, mode_optional, callback
   });
 
   server.on('listening', function () {
-    if (mode_optional) {
-      fs.chmod(path, mode_optional, function (err) {
+    if (options && options.mode) {
+      fs.chmod(path, options.mode, function (err) {
         if (err) {
-          return callback(new Error('couldnt change socket mode to ' + mode_optional + ': ' + err.toString()))
+          return callback(new Error('couldnt change socket mode to ' + options.mode + ': ' + err.toString()))
         } else {
           return callback()
         }
