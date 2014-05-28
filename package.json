@@ -1,6 +1,6 @@
 {
   "name": "unix-listen",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Simple but comprehensive unix socket listening.",
   "main": "index.js",
   "scripts": {
